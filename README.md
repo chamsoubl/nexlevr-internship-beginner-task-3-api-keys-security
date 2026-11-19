@@ -1,52 +1,106 @@
-# Nexlevr Internship – Task 3: API Keys Security Guide
+# Nexlevr Internship – Beginner Task 3: API Keys Security Guide
 
-## 📌 Overview
+**Organization:** [Nexlevr](https://github.com/Nexlevr)  
+**Internship Track:** Beginner  
+**Task:** 3 of 3 – API Keys: How to Store Them Safely  
+**Focus:** API Security and Environment Variables  
+**Documentation Format:** Markdown  
+**Status:** Completed
 
-This project was completed as part of **Task 3 of the Nexlevr Internship**.
+## About the Internship
 
-The objective is to create a beginner-friendly guide explaining how to store API keys securely, protect sensitive information, and prevent accidental exposure of credentials.
+This project is part of the [Nexlevr](https://github.com/Nexlevr) internship program, which includes Beginner, Intermediate, and Advanced task tracks.
 
-## 🎯 Objectives
+This repository documents my work on the third Beginner-level task, focusing on API key security, environment variables, Git secrets protection, and secure credential management.
+
+## Project Overview
+
+The objective was to create a beginner-friendly guide explaining how developers can store API keys securely and protect sensitive credentials when working on software projects.
+
+The guide introduces practical security techniques, including using `.env` files, configuring `.gitignore`, preventing accidental exposure of secrets on GitHub, and handling compromised API keys.
+
+It also explains the importance of API key rotation and additional security best practices.
+
+## Objectives
 
 - Understand what API keys are and why they must be protected.
-- Learn how to store API keys using `.env` files.
-- Understand how to use `.gitignore` to prevent secrets from being uploaded to GitHub.
-- Learn what to do if an API key is accidentally exposed.
-- Understand API key rotation and security best practices.
+- Learn how to store sensitive credentials using `.env` files.
+- Understand how to load environment variables in Python.
+- Learn how to configure `.gitignore` to prevent secrets from being committed.
+- Understand the risks of publishing API keys on GitHub.
+- Identify the steps to take when an API key is exposed.
+- Understand API key rotation and credential replacement.
+- Explore additional security best practices.
 
-## 📚 Topics Covered
+## Topics Covered
 
 ### 1. Understanding API Keys
-An introduction to API keys, their purpose, and their importance in application authentication.
 
-### 2. Using Environment Variables
+An introduction to API keys, their purpose, and their role in authenticating applications when accessing external services.
+
+### 2. Using .env Files
+
 Explains how to:
-- Create a `.env` file.
-- Store API keys securely.
-- Load environment variables in Python using `python-dotenv`.
 
-### 3. Protecting Secrets with Git
-Explains:
-- Why API keys should never be committed to GitHub.
+- Create a `.env` file.
+- Store API keys as environment variables.
+- Load environment variables using Python.
+- Use the `python-dotenv` package.
+
+### 3. Protecting Secrets with Git and GitHub
+
+Covers:
+
+- Why API keys should never be committed to public repositories.
 - How to configure `.gitignore`.
 - How to create a safe `.env.example` file.
-- How to check files before pushing changes.
+- How to check tracked files before pushing changes to GitHub.
 
 ### 4. Handling Leaked API Keys
-Explains the steps to take when an API key is exposed:
-- Revoke the compromised key.
-- Generate a replacement key.
-- Update environment variables.
-- Review API usage and activity.
-- Remove exposed secrets from repository history where appropriate.
+
+Explains the recommended response when an API key is accidentally exposed:
+
+1. Revoke the compromised API key.
+2. Generate a replacement key.
+3. Update environment variables.
+4. Review API usage and activity logs.
+5. Remove exposed credentials from repository history where appropriate.
+6. Apply additional security measures to prevent future leaks.
 
 ### 5. API Key Rotation
-Explains why replacing old credentials regularly or after a security incident helps reduce security risks.
+
+Explains the process of replacing existing API keys regularly or when credentials may have been compromised.
 
 ### 6. Additional Security Best Practices
-Covers permissions, usage limits, separate development and production keys, and secure production secret management.
 
-## 📁 Project Structure
+Covers important recommendations, including:
+
+- Using separate keys for development and production.
+- Restricting API key permissions.
+- Setting usage limits and billing alerts.
+- Avoiding exposure of private keys in frontend applications.
+- Using secure secrets management for production environments.
+
+## Practical Examples
+
+The guide includes practical examples demonstrating:
+
+- Environment variable configuration.
+- Python environment variable loading.
+- `.gitignore` configuration.
+- `.env.example` templates.
+- Secure handling of exposed API credentials.
+
+## Technologies and Tools
+
+- Markdown
+- Python
+- python-dotenv
+- Environment Variables
+- Git
+- GitHub
+
+## Project Structure
 
 ```text
 nexlevr-internship-task-3-api-keys-security-guide/
@@ -56,29 +110,30 @@ nexlevr-internship-task-3-api-keys-security-guide/
 └── api_keys_guide.md
 ```
 
-## 🛠️ Technologies and Tools
+## Main Deliverable
 
-- **Markdown:** Documentation and formatting.
-- **Git:** Version control.
-- **GitHub:** Repository hosting.
-- **Python:** Example of loading environment variables.
-- **python-dotenv:** Python package for reading `.env` files.
-
-## 🔐 Security Reminder
-
-Never publish real API keys, passwords, access tokens, or other sensitive credentials in public repositories.
-
-If a key is exposed, revoke it immediately and replace it with a new one. Removing the key from a file or Git history alone does not make it safe again.
-
-## ✅ Deliverable
+**API Keys: How to Store Them Safely**
 
 The main deliverable is:
 
 [`api_keys_guide.md`](api_keys_guide.md)
 
-This document provides a practical introduction to API key security for beginners.
+This document provides a structured introduction to API key security and practical recommendations for beginners.
 
----
+## Security Reminder
 
-**Nexlevr Internship – Task 3 of 3**  
-*API Keys: How to Store Them Safely*
+API keys must always be treated as sensitive credentials.
+
+Never publish real API keys, passwords, access tokens, or other secrets in public repositories.
+
+If a key is exposed, revoke it immediately and generate a replacement. Removing a key from a repository does not invalidate the compromised credential.
+
+## Conclusion
+
+This task provided an introduction to essential security practices in software development.
+
+It demonstrated the importance of environment variables, Git secrets protection, secure credential storage, and API key rotation.
+
+Following these practices helps developers build safer applications and reduce the risk of unauthorized access.
+
+**[Nexlevr](https://github.com/Nexlevr) Internship – Beginner Track | Task 3 of 3**
